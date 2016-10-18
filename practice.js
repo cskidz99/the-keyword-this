@@ -86,7 +86,9 @@ var getMyUsername = function() {
  return this.username;
 };
 
-var userName = myUser.bind(this.getMyUsername()); //Fix this
+var userName = getMyUsername.call(myUser);
+userName();
+// userName('iliketurtles'); //Fix this
 
 //Above you're given an object, and  a function. What will the getUsername function return?
 //Note(no tests)
